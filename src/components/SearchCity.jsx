@@ -7,7 +7,7 @@ const SearchCity = ({ getSearchedCity, getCurrentCity }) => {
 
   const getCountryList = (e) => {
     if (e.target.value !== '') {
-      const url = `http://api.openweathermap.org/geo/1.0/direct?q=${e.target.value}&limit=5&appid=${import.meta.env.VITE_WEATHER_API_KEY}`;
+      const url = `https://api.openweathermap.org/geo/1.0/direct?q=${e.target.value}&limit=5&appid=${import.meta.env.VITE_WEATHER_API_KEY}`;
       fetch(url)
         .then((response) => response.json())
         .then((data) => {
